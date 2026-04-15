@@ -1,5 +1,5 @@
 {
-  "enabled": false,
-  "min_version": 1,
-  "message": "Please update the app"
+  "enabled": true,
+  "min_version": 3,
+  "message": "This version is no longer supported. Please update the app to continue"
 }
