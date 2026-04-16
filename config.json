@@ -1,9 +1,9 @@
-factory AppConfig.fromJson(Map<String, dynamic> json) {
-  return AppConfig(
-    enabled: json['enabled'] as bool,
-    minVersion: json['min_version'] as String,
-    message: json['message'] as String,
-    maintenanceMode: json['maintenance_mode'] as bool,
-    forceUpdate: json['force_update'] as bool,
-  );
+{
+  "enabled": true,
+  "min_version": "1.2.0",
+  "latest_version": "1.3.5",
+  "force_update": true,
+  "maintenance_mode": false,
+  "message": "Update required",
+  "optional_update_message": "A new version is available with improvements"
 }
