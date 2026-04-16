@@ -1,6 +1,6 @@
 {
   "enabled": true,
-  "min_version": "1.0.0",
+  "min_version": "1.0.3",
   "latest_version": "1.5.0",
   "force_update": false,
   "maintenance_mode": false,
