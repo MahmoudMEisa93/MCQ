@@ -5,8 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ZerDr | The ER Doctor</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -17,69 +16,183 @@
     }
 
     body {
-      background: linear-gradient(135deg, #0f172a, #1e293b);
+      height: 100vh;
+      overflow: hidden;
       color: #fff;
+      background: #0b1220;
+    }
+
+    /* HERO BACKGROUND */
+    .hero {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: url('https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      filter: brightness(0.35);
+      transform: scale(1.1);
+    }
+
+    /* animated overlay gradient */
+    .overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-45deg, #0f172a, #1e3a8a, #0ea5e9, #111827);
+      background-size: 400% 400%;
+      animation: gradientMove 10s ease infinite;
+      opacity: 0.35;
+    }
+
+    @keyframes gradientMove {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
+    /* MAIN CARD */
+    .container {
+      position: relative;
+      z-index: 2;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
       text-align: center;
+      padding: 20px;
     }
 
-    .container {
-      max-width: 600px;
+    .card {
+      max-width: 650px;
       padding: 40px;
-      background: rgba(255,255,255,0.05);
-      border-radius: 20px;
-      backdrop-filter: blur(10px);
-      box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+      border-radius: 25px;
+      background: rgba(255,255,255,0.08);
+      backdrop-filter: blur(15px);
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      animation: fadeUp 1.2s ease-out;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     .logo {
-      font-size: 42px;
-      font-weight: 600;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
+      font-size: 44px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      color: #38bdf8;
+      text-shadow: 0 0 20px rgba(56,189,248,0.6);
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from {text-shadow: 0 0 10px #38bdf8;}
+      to {text-shadow: 0 0 25px #0ea5e9;}
     }
 
     .tagline {
+      margin-top: 5px;
       font-size: 16px;
-      color: #38bdf8;
-      margin-bottom: 30px;
+      color: #cbd5e1;
     }
 
     .name {
-      font-size: 28px;
-      font-weight: 500;
-      margin-bottom: 10px;
+      margin-top: 20px;
+      font-size: 26px;
+      font-weight: 600;
     }
 
     .title {
       font-size: 18px;
-      color: #cbd5f5;
-      margin-bottom: 30px;
+      color: #94a3b8;
+      margin-top: 5px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 6px 12px;
+      background: rgba(14,165,233,0.2);
+      border: 1px solid rgba(14,165,233,0.4);
+      border-radius: 20px;
+      font-size: 12px;
+      color: #38bdf8;
+    }
+
+    .contact {
+      margin-top: 25px;
     }
 
     .contact a {
       display: block;
-      margin: 10px 0;
+      margin: 10px auto;
+      width: 80%;
       text-decoration: none;
       color: #fff;
       padding: 12px;
-      border-radius: 10px;
-      background: #2563eb;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #2563eb, #0ea5e9);
       transition: 0.3s;
+      font-weight: 500;
     }
 
     .contact a:hover {
-      background: #1d4ed8;
-      transform: translateY(-2px);
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(14,165,233,0.4);
+    }
+
+    .floating {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .circle {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(56,189,248,0.15);
+      animation: float 12s infinite ease-in-out;
+    }
+
+    .circle:nth-child(1){
+      width: 120px;
+      height: 120px;
+      top: 10%;
+      left: 15%;
+    }
+
+    .circle:nth-child(2){
+      width: 180px;
+      height: 180px;
+      bottom: 15%;
+      right: 10%;
+    }
+
+    .circle:nth-child(3){
+      width: 80px;
+      height: 80px;
+      top: 60%;
+      left: 70%;
+    }
+
+    @keyframes float {
+      0% {transform: translateY(0);}
+      50% {transform: translateY(-30px);}
+      100% {transform: translateY(0);}
     }
 
     .footer {
-      margin-top: 25px;
-      font-size: 12px;
-      color: #94a3b8;
+      margin-top: 20px;
+      font-size: 11px;
+      color: #64748b;
     }
 
   </style>
@@ -87,23 +200,36 @@
 
 <body>
 
+  <div class="hero"></div>
+  <div class="overlay"></div>
+
+  <div class="floating">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+  </div>
+
   <div class="container">
-    
-    <div class="logo">ZerDr</div>
-    <div class="tagline">The ER Doctor</div>
+    <div class="card">
 
-    <div class="name">Dr. Mahmoud M. Eisa</div>
-    <div class="title">Emergency Medicine Physician</div>
+      <div class="logo">ZerDr</div>
+      <div class="tagline">The ER Doctor</div>
 
-    <div class="contact">
-      <a href="mailto:Dr.mmEisa@gmail.com">📧 Dr.mmEisa@gmail.com</a>
-      <a href="https://wa.me/201013975030" target="_blank">📱 WhatsApp Contact</a>
+      <div class="name">Mahmoud Mostafa Abdelnaby Abdelhamid</div>
+      <div class="title">Emergency Medicine Physician</div>
+
+      <div class="badge">Medical • Emergency • Digital Health</div>
+
+      <div class="contact">
+        <a href="mailto:Dr.mmEisa@gmail.com">📧 Email Me</a>
+        <a href="https://wa.me/201013975030" target="_blank">📱 WhatsApp</a>
+      </div>
+
+      <div class="footer">
+        © 2026 ZerDr.com — Built with passion in Emergency Medicine
+      </div>
+
     </div>
-
-    <div class="footer">
-      © 2026 ZerDr.com — All Rights Reserved
-    </div>
-
   </div>
 
 </body>
