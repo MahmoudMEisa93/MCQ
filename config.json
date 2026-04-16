@@ -1,5 +1,5 @@
 {
-  "enabled": true,
+  "enabled": false,
   "min_version": "1.0.3",
   "force_update": true,
   "maintenance_mode": false,
