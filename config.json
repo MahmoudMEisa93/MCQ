@@ -1,8 +1,8 @@
 {
   "enabled": true,
-  "min_version": "1.0.6",
-  "latest_version": "1.0.7",
-  "force_update": true,
+  "min_version": "1.0.5",
+  "latest_version": "1.0.6",
+  "force_update": false,
   "maintenance_mode": false,
   "message": "This version is no longer supported. Please update the app to continue"
 }
