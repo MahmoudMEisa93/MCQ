@@ -1,9 +1,9 @@
 {
-  "remote_first": false,
+  "remote_first": true,
   "enabled": true,
   "maintenance_mode": false,
   "force_update": false,
   "min_version": "1.0.5",
-  "latest_version": "1.0.5",
+  "latest_version": "1.0.6",
   "message": "Need help? We’re here for you—don’t hesitate to reach out."
 }
