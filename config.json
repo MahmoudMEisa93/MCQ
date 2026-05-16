@@ -3,7 +3,7 @@
   "enabled": true,
   "maintenance_mode": false,
   "force_update": true,
-  "min_version": "1.0.5",
-  "latest_version": "1.0.12",
+  "min_version": "1.0.12",
+  "latest_version": "1.0.23",
   "message": "Need help? We’re here for you — don’t hesitate to Contact Us."
 }
